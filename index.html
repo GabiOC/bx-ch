@@ -2,21 +2,1094 @@
 <head>
 
   <meta charset="utf-8">
-  <title>How to Create a CSS Overlay</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <title>Marmot</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 
-  <h1>This is placeholder text!</h1>
-
 <!-- The trigger should show a centered overlay on top of the site that displays the information gathered
 above and two buttons. One button closes the overlay and the other takes the user to the cart page. -->
-  <div id="dialog-confirm">
+
+<!-- Overlay -->
+
+<div id="cart-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+
+    <!-- Overlay content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Want to Stay Warm This Winter?</h4>
+      </div>
+      <div class="modal-body">
+        <div class="cart-content"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Hell no I don't</button>
+        <a href="https://marmot.com/checkout/cart">
+          <button class="btn btn-primary" type="submit">Hellz yeah I do!</button>
+        </a>
+      </div>
+    </div>
 
   </div>
+</div>
 
+<!-- Scraped Marmot homepage with dummy cart data added -->
+
+<header id="wrapperHeader">
+  <div class="content-inner clear">
+      <h1 id="logo">
+          <a href="/"><img src="/includes/img/interface/logo.gif" alt="Marmot" title="Marmot" /></a>
+      </h1>
+
+      <ul class="device-only menu-icons">
+
+              <li><a class="mobile-cart-link" href="#"><img src="/includes/img/content/icon-shopping-cart@2x.jpg" alt="" /></a></li>
+
+          <li><a class="mobile-retailer-link" href="/content/find-a-retailer"><img src="/includes/img/icon_retail.jpg" alt="" /></a></li>
+
+              <li><a class="mobile-profile-link" href="/account/login"><img src="/includes/img/content/icon-myaccount@2x.jpg" alt="" /></a></li>
+
+      </ul>
+
+
+          <div id="hdrPromo" class="large-screen-only">Free ground shipping on orders over $75</div>
+
+      <div class="user-panel">
+          <ul id="navUser">
+              <li id="navRetailers"><a href="/content/find-a-retailer">Find a Store</a></li>
+
+                  <li id="navMyAct"><a href="/account/login">My Account</a></li>
+                  <li></li>
+                  <!-- <li></li> -->
+
+          </ul>
+
+              <ul id="navCart">
+                  <li id="navShoppingCart"><a href="/checkout/cart">Shopping Cart (2)</a></li>
+                  <!-- <li id="navCheckout"><a href="/checkout/cart">Checkout</a></li>-->
+              </ul>
+
+      </div>
+
+
+<div id="hdrShoppingCart">
+<span class="up-arrow"></span>
+<div id="hdrShoppingCartContent">
+
+<!-- Begin dummy data for javascript -->
+<div id="cartItems"><div class="item">   <div class="itemImg">    <img src="http://cdnmedia.marmot.com/images/product/tile/46200_2975_f.jpg" alt="Women's PreCip Jacket" title="Women's PreCip Jacket">   </div>   <div class="itemDtls">    <ul>     <li class="itemTitle">Women's PreCip Jacket</li>     <li>Price: $100.00</li>     <li>Arctic Navy</li>     <li>Small</li>     <li>Qty: 1&nbsp;&nbsp;<a id="rm-d45e227b-17f9-40ff-9e63-83d2857fd9b4" class="itemRemove" href="#"><img alt="Remove" src="/includes/img/interface/icon-trash.jpg"></a></li>    </ul>   </div>  </div><div class="item">   <div class="itemImg">    <img src="http://cdnmedia.marmot.com/images/product/tile/78050_001_f.jpg" alt="Women's Hailey Jacket" title="Women's Hailey Jacket">   </div>   <div class="itemDtls">    <ul>     <li class="itemTitle">Women's Hailey Jacket</li>     <li>Price: $250.00</li>     <li>Black</li>     <li>Small</li>     <li>Qty: 1&nbsp;&nbsp;<a id="rm-a775ed15-a35e-4b04-be5e-9011984cbec9" class="itemRemove" href="#"><img alt="Remove" src="/includes/img/interface/icon-trash.jpg"></a></li>    </ul>   </div>  </div></div>  <div id="coBlock">
+  <div id="coBlock" style="display: block;">
+    <div id="hdrCartSubtotal">
+      Subtotal <span id="subTotal">$350.00</span>
+    </div>
+    <div class="buttons">
+      <a id="hdrCartCheckout" class="cartCheckout btn red" href="/checkout/cart">View Cart</a>
+      <a id="" class="cartCheckout btn red" href="/checkout/account">Checkout</a>
+    </div>
+  </div>
+<!-- End dummy data -->
+
+    <div class="buttons">
+      <a id="hdrCartCheckout" class="cartCheckout btn red" href="/checkout/cart">View Cart</a>
+      <a id="" class="cartCheckout btn red" href="/checkout/account">Checkout</a>
+    </div>
+  </div>
+     <div class="itemBanner"><a href="/products/details/tibetan-prayer-flag"><img src="https://d2hauqq2vokw5i.cloudfront.net/images/gsl_cart_dropdown.jpg" alt="Add a Holiday Extra"/></a></div>
+</div>
+<!-- /div#hdrShoppingCartContent -->
+</div>
+<!-- /div#hdrShoppingCart -->
+
+
+      <div class="nav-search-container">
+
+
+<div class="navMain">
+<span class="label"><span>Shop:<span class="up-arrow"></span></span></span>
+<div class="main-category-list">
+<ul class="clearfix">
+  <li>
+    <a href="/products/men" class="has-children">Men<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/products/men/jackets--vests" class="has-children">Jackets &amp; Vests</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/men/jackets--vests?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/insulated-jackets">Insulated</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/waterproof-jackets">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/fleece-jackets">Fleece</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/softshells">Softshell</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/windproof-jackets">Windproof</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/vests">Vests</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/component-jackets">Component</a>
+          </li>
+          <li>
+            <a href="/products/men/jackets--vests/snowsports">Snowsport</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/men/shirts--pullovers" class="has-children">Tops</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/men/shirts--pullovers?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/men/shirts--pullovers/trail-to-town-shirts">Shirts and Polos</a>
+          </li>
+          <li>
+            <a href="/products/men/shirts--pullovers/tee-shirts">Tee Shirts</a>
+          </li>
+          <li>
+            <a href="/products/men/shirts--pullovers/hoodies">Hoodies</a>
+          </li>
+          <li>
+            <a href="/products/men/shirts--pullovers/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/men/baselayers/tops">Baselayer</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/men/pants" class="has-children">Bottoms</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/men/pants?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/trail-to-town-pants">Pants</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/shorts">Shorts</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/waterproof--insulated-pants">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/shells">All Shells</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/softshells">Softshell</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/men/baselayers/bottoms">Baselayer</a>
+          </li>
+          <li>
+            <a href="/products/men/pants/snowsports">Snowsport</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/men/accessories" class="has-children">Accessories</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/men/accessories?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/men/accessories/hats-caps--beanies">Hats Caps &amp; Beanies</a>
+          </li>
+          <li>
+            <a href="/products/men/accessories/gloves--mitts">Gloves &amp; Mitts</a>
+          </li>
+          <li>
+            <a href="/products/men/accessories/belts">Belts</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/products/women" class="has-children">Women<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/products/women/jackets--vests" class="has-children">Jackets &amp; Vests</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/women/jackets--vests?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/insulated-jackets">Insulated</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/waterproof-jackets">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/fleece-jackets">Fleece</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/softshells">Softshell</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/windproof-jackets">Windproof</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/vests">Vests</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/component-jackets">Component</a>
+          </li>
+          <li>
+            <a href="/products/women/jackets--vests/snowsports">Snowsport</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/women/shirts--pullovers" class="has-children">Tops</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/women/shirts--pullovers?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/women/shirts--pullovers/trail-to-town-shirts">Shirts and Pullovers</a>
+          </li>
+          <li>
+            <a href="/products/women/shirts--pullovers/tee-shirts">Tee Shirts</a>
+          </li>
+          <li>
+            <a href="/products/women/shirts--pullovers/tank-tops">Tanks</a>
+          </li>
+          <li>
+            <a href="/products/women/shirts--pullovers/hoodies">Hoodies</a>
+          </li>
+          <li>
+            <a href="/products/women/shirts--pullovers/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/women/baselayers/tops">Baselayer</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/women/pants" class="has-children">Bottoms</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/women/pants?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/trailtotown-pants">Pants</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/shorts--skirts">Shorts, Skirts &amp; Dresses</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/waterproof--insulated-pants">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/shells">All Shells</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/softshells">Softshell</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/training">Training</a>
+          </li>
+          <li>
+            <a href="/products/women/baselayers/bottoms">Baselayer</a>
+          </li>
+          <li>
+            <a href="/products/women/pants/snowsports">Snowsport</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/women/accessories" class="has-children">Accessories</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/women/accessories?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/women/accessories/hats-caps--beanies">Hats Caps &amp; Beanies</a>
+          </li>
+          <li>
+            <a href="/products/women/accessories/gloves--mitts">Gloves &amp; Mitts</a>
+          </li>
+          <li>
+            <a href="/products/women/accessories/belts">Belts</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/products/kids" class="has-children">Kids<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/products/kids/boys/jackets" class="has-children">Boys Jackets</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/boys/jackets/waterproof-jackets">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/kids/boys/jackets/insulated-jackets">Insulated</a>
+          </li>
+          <li>
+            <a href="/products/kids/boys/jackets/fleece-jackets">Fleece</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/boys/shirts--pullovers" class="has-children">Boys Tops</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/boys/shirts--pullovers">Shirts &amp; Pullovers</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/boys/pants" class="has-children">Boys Bottoms</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/boys/pants">Pants &amp; Shorts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/boys/accessories/gloves--mitts" class="has-children">Boys Accessories</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/boys/accessories/gloves--mitts">Gloves &amp; Mitts</a>
+          </li>
+          <li>
+            <a href="/products/kids/boys/accessories/hats-caps--beanies">Hats Caps &amp; Beanies</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/girls/jackets" class="has-children">Girls Jackets</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/girls/jackets/waterproof-jackets">Waterproof</a>
+          </li>
+          <li>
+            <a href="/products/kids/girls/jackets/insulated-jackets">Insulated</a>
+          </li>
+          <li>
+            <a href="/products/kids/girls/jackets/fleece-jackets">Fleece</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/girls/shirts--pullovers" class="has-children">Girls Tops</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/girls/shirts--pullovers">Shirts &amp; Pullovers</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/girls/pants" class="has-children">Girls Bottoms</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/girls/pants">Pants &amp; Shorts</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/kids/girls/accessories/gloves--mitts" class="has-children">Girls Accessories</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/kids/girls/accessories/gloves--mitts">Gloves &amp; Mitts</a>
+          </li>
+          <li>
+            <a href="/products/kids/girls/accessories/hats-caps--beanies">Hats Caps &amp; Beanies</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/products/equipment" class="has-children">Equipment<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/products/equipment/packs--haulers" class="has-children">Packs &amp; Haulers</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/equipment/packs--haulers?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/day-packs">Day Packs</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/urban-packs">Urban Packs</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/multi-day-packs">Multi-Day Packs</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/hydration-packs">Hydration Packs</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/kids-packs">Kids Packs</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/duffle-bags">Duffle Bags</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/rolling-haulers">Rolling Haulers</a>
+          </li>
+          <li>
+            <a href="/products/equipment/packs--haulers/travel-kits">Travel Kits</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/equipment/sleeping-bags" class="has-children">Sleeping Bags</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/equipment/sleeping-bags?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/down-sleeping-bags">Down Sleeping Bags</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/synthetic-sleeping-bags">Synthetic Sleeping Bags</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/sleeping-bags-by-temperature-rating">Sleeping Bags by Temperature</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/sleeping-bags-by-weight">Sleeping Bags by Weight</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/womens-sleeping-bags">Women's Sleeping Bags</a>
+          </li>
+          <li>
+            <a href="/products/equipment/sleeping-bags/kids-sleeping-bags">Kids Sleeping Bags</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/equipment/tents" class="has-children">Tents</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/equipment/tents?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/1-person-tents--bivy">1 Person Tents &amp; Bivy</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/2-person-tents">2 Person Tents</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/3-person-tents">3 Person Tents</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/4-person-tents">4 Person Tents</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/6-person-tents">6 Person Tents</a>
+          </li>
+          <li>
+            <a href="/products/equipment/tents/8-person-tents">8 Person Tents</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/equipment/accessories" class="has-children">Accessories</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/equipment/accessories?sort=CatalogBadgings">New</a>
+          </li>
+          <li>
+            <a href="/products/equipment/accessories/pillows">Camp Pillows</a>
+          </li>
+          <li>
+            <a href="/products/equipment/accessories/footprints">Tent Footprints</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/products/activity" class="has-children">Activities<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/products/activity/adventure-travel" class="has-children">Adventure Travel</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/adventure-travel/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/adventure-travel/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/adventure-travel/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/alpine-climbing" class="has-children">Alpine Climbing</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/alpine-climbing/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/alpine-climbing/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/alpine-climbing/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/backpacking" class="has-children">Backpacking</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/backpacking/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/backpacking/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/backpacking/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/camping" class="has-children">Camping</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/camping/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/camping/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/camping/kids">Kids</a>
+          </li>
+          <li>
+            <a href="/products/activity/camping/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/climbing--bouldering" class="has-children">Climbing &amp; Bouldering</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/climbing--bouldering/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/climbing--bouldering/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/climbing--bouldering/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/expedition" class="has-children">Expedition</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/expedition/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/expedition/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/expedition/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/hiking" class="has-children">Hiking</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/hiking/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/hiking/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/hiking/kids">Kids</a>
+          </li>
+          <li>
+            <a href="/products/activity/hiking/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/snowsports" class="has-children">Snowsports</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/snowsports/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/snowsports/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/snowsports/kids">Kids</a>
+          </li>
+          <li>
+            <a href="/products/activity/snowsports/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/train-run-ride" class="has-children">Train Run Ride</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/train-run-ride/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/train-run-ride/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/train-run-ride/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/products/activity/urban-exploration" class="has-children">Urban Exploration</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/products/activity/urban-exploration/men">Men</a>
+          </li>
+          <li>
+            <a href="/products/activity/urban-exploration/women">Women</a>
+          </li>
+          <li>
+            <a href="/products/activity/urban-exploration/equipment">Equipment</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/products/details/marmot-gift-card">Gift Cards</a>
+  </li>
+  <button class="main-category-list-close-x"></button>
+</ul>
+</div>
+
+<span class="label"><span>Explore:<span class="up-arrow"></span></span></span>
+<div class="main-category-list">
+<ul class="clearfix">
+  <li>
+    <a href="/content/technology/the-elements/" class="has-children">Technology<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/content/technology/the-elements/water/" class="has-children">Water</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/technology/the-elements/water/marmot-nanopro/">Marmot NanoPro</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/water/gore-tex/">Gore-Tex</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/water/marmot-downdefender/">Marmot Down Defender</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/water/marmot-m-series/">Marmot M Softshells</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/water/marmot-membrain/">Marmot MemBrain</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/water/guardian/">Marmot Guardian</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/technology/the-elements/wind/" class="has-children">Wind</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/technology/the-elements/wind/windstopper/">Gore Windstopper</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/wind/marmot-m-series/">Marmot M Softshells</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/technology/the-elements/cold/" class="has-children">Cold</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/technology/the-elements/cold/polartec-alpha/">Polartec Alpha</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/cold/primaloft-one/">PrimaLoft One</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/cold/spirafil/">Marmot SpiraFil</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/cold/thermal-r/">Marmot Thermal R</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/technology/the-elements/heat/" class="has-children">Heat</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/technology/the-elements/heat/coolmax/">Coolmax</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/driclime/">DriClime</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/drirelease/">DriRelease</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/polartec-power-dry/">Polartec Power Dry</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/solarshield/">SolarShield</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/airflow/">Airflow</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/nanowick/">Nanowick</a>
+          </li>
+          <li>
+            <a href="/content/technology/the-elements/heat/techdenim/">TechDenim</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="/content/athletes" class="has-children">Athletes<span class="up-arrow"></span></a>
+    <ul class="menu menu-level-1 clearfix">
+      <li>
+        <a href="/content/athletes/mountain-guides/" class="has-children">Mountain Guides</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/athletes/mountain-guides/ruedibeglinger/">Ruedi Beglinger</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/marknewcomb/">Mark Newcomb</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/lizsmart/">Liz Smart</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/keithgarvey/">Keith Garvey</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/jimwilliams/">Jim Williams</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/dickjackson/">Dick Jackson</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/christiansantelices/">Christian Santelices</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/brentonreagan/">Brenton Reagan</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/arminfisher/">Armin Fisher</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/angelahawse/">Angela Hawse</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/adrianballinger/">Adrian Ballinger</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/milessmart/">Miles Smart</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/mikealkaitis/">Mike Alkaitis</a>
+          </li>
+          <li>
+            <a href="/content/athletes/mountain-guides/mikepoborsky">Mike Poborsky</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/athletes/ambassadors/" class="has-children">Ambassadors</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/athletes/ambassadors/saraagah/">Sara Agah</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/benayers/">Ben Ayers</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/jordancampbell/">Jordan Campbell</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/luannefreer/">Luanne Freer</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/acekvale/">Ace Kvale</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/jimnowak/">Jim Nowak</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/heatherpaul/">Heather Paul</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/suepurvis/">Sue Purvis</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/kimreynolds/">Kim Reynolds</a>
+          </li>
+          <li>
+            <a href="/content/athletes/ambassadors/seanswarner/">Sean Swarner</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/athletes/freeride-skiers/" class="has-children">Freeride Skiers</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/athletes/freeride-skiers/ericbryant/">Eric Bryant</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/jakecohn/">Jake Cohn</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/darcyconover/">Darcy Conover</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/gregernst/">Greg Ernst</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/robbyfranco">Robby Franco</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/piphunt/">Pip Hunt</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/emmalande/">Emma Lande</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/mikeleake/">Mike Leake</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/monicapurington/">Monica Purington</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/jasonsiegel/">Jason Siegel</a>
+          </li>
+          <li>
+            <a href="/content/athletes/freeride-skiers/ken-lucas/">Ken Lucas</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/athletes/alpine-climbers/" class="has-children">Alpine Climbers</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/athletes/alpine-climbers/petetakeda/">Pete Takeda</a>
+          </li>
+          <li>
+            <a href="/content/athletes/alpine-climbers/bradclement/">Brad Clement</a>
+          </li>
+          <li>
+            <a href="/content/athletes/alpine-climbers/tonyaclement/">Tonya Clement</a>
+          </li>
+          <li>
+            <a href="/content/athletes/alpine-climbers/stefanglowacz/">Stefan Glowacz</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/content/athletes/rock-climbers/" class="has-children">Rock Climbers</a>
+        <ul class="menu menu-level-2 clearfix">
+          <li>
+            <a href="/content/athletes/rock-climbers/jonglassberg/">Jon Glassberg</a>
+          </li>
+          <li>
+            <a href="/content/athletes/rock-climbers/abbeysmith/">Abbey Smith</a>
+          </li>
+          <li>
+            <a href="/content/athletes/rock-climbers/stellanoble/">Stella Noble</a>
+          </li>
+          <li>
+            <a href="/content/athletes/rock-climbers/jordon-griffler/">Jordon Griffler</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <button class="main-category-list-close-x"></button>
+</ul>
+</div>
+</div>
+
+          <form action="/search/products" id="searchForm">
+              <fieldset id="search" role="search">
+        <input id="searchText" name="searchText" type="text" value="" placeholder="Search"><a id="searchBtn" href="#" title="Search"><div id="searchBtnImg"></div></a></input>
+              </fieldset>
+          </form>
+      </div>
+  </div>
+</header>
+
+<div class="wrapper">
+  <div id="content" class="content-inner clear" role="main">
+
+<div id="slider-wrapper">
+
+<!-- images are 980x400 -->
+<div class="cycle-slideshow" style="max-height:550px;" data-cycle-slides="a" data-cycle-speed="800" data-cycle-timeout="6000" data-cycle-carousel-fluid=true data-cycle-swipe=true>
+  <a href="/search/insulation" title="Insulation"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_insulation.jpg" alt="Insulation" /></a>
+  <a href="/products/activity/urban-exploration/women" title="Urban Exploration Women"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_w.jpg" alt="Urban Exploration Women" /></a>
+        <a href="/products/activity/urban-exploration/men" title="Urban Exploration Men"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_m.jpg" alt="Urban Exploration Men" /></a>
+     </div>
+</div>
+
+<div class="feature-container" id="hp-merch-spot-tracking">
+  <a href="/search/waterproof-extreme" title="Marmot Waterproof Extreme">
+      <!-- image is 238x198 -->
+      <div>
+          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-shells.jpg" alt="Marmot Waterproof Extreme" />
+          <h2 class="hoverable">
+              <span class="normal">Protection Everywhere</span><span class="hover">Shop Shells</span>
+          </h2>
+      </div>
+  </a>
+
+  <a href="/products/activity/snowsports" title="Snowsports">
+      <!-- image is 237x198 -->
+      <div>
+          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-snowsports.jpg" alt="Snowsports" />
+          <h2 class="hoverable">
+              <span class="normal">Living the Adventure</span><span class="hover">Shop Snowsports</span>
+          </h2>
+      </div>
+  </a>
+
+  <a href="/products/jackets--vests/softshells" title="Marmot Softshells">
+      <!-- image is 238x198 -->
+      <div>
+          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-softshells.jpg" alt="Marmot Softshells" />
+          <h2 class="hoverable">
+              <span class="normal">Versatility &amp; Comfort</span><span class="hover">Shop Softshells</span>
+          </h2>
+      </div>
+  </a>
+
+  <a href="/content/find-a-store/marmot-stores/denver" title="Explore the Store">
+      <!-- image is 237x198 -->
+      <div>
+          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-denver.jpg" alt="Explore the Store" />
+          <h2 class="hoverable">
+              <span class="normal">New Store &mdash; Denver</span><span class="hover">Explore the Store</span>
+          </h2>
+      </div>
+  </a>
+</div>
+
+  </div>
+</div>
+
+<div id="hdrPromo" class="device-only">Free ground shipping on orders over $75</div>
+<footer class="primary-footer clear">
+<div class="content-inner">
+  <div class="col collapse">
+    <h2 class="clickable"><a href="/content/customer-service/">Customer Service</a></h2>
+    <ul id="temp">
+      <li><a href="/content/customer-service/contact/">Contact Us</a></li>
+      <li><a href="/content/customer-service/order-status">Order Status</a></li>
+      <li><a href="/content/customer-service/shipping-and-delivery">Shipping &amp; Delivery</a></li>
+      <li><a href="/content/customer-service/returns">Returns &amp; Exchanges</a></li>
+      <li><a href="/content/customer-service/warranty">Warranty &amp; Registration</a></li>
+      <li><a href="/content/customer-service/corporate-sales/">Corporate Sales</a></li>
+    </ul>
+  </div>
+  <div class="col collapse">
+    <h2 class="clickable"><a href="/content/product-info/">Product Info</a></h2>
+    <ul>
+      <li><a href="/content/product-info/sizing">Size &amp; Fit</a></li>
+      <li><a href="/content/product-info/care">Wash &amp; Care</a></li>
+      <li><a href="/content/product-info/faqs">Product FAQs</a></li>
+    </ul>
+  </div>
+  <div class="col collapse last">
+    <h2 class="clickable"><a href="/content/about-us">About Us</a></h2>
+    <ul>
+      <li><a href="/content/about-us/our-story">Our Story</a></li>
+      <li><a href="/content/about-us/responsibility/">People/Product/Planet</a></li>
+      <li><a href="/content/about-us/marmot-flagship-stores/">Flagship Stores</a></li>
+      <li><a href="/content/about-us/careers">Careers</a></li>
+      <li><a href="http://trade.marmot.com/" target="_blank">Trade Resources</a></li>
+      <li><a href="/content/about-us/affiliate">Affiliate Program</a></li>
+    </ul>
+  </div>
+
+  <div class="col email collapse">
+    <div class="footer-email-signup-loader"><div></div></div>
+    <div class="footer-email-signup-container">
+    <h2>Email Sign Up</h2>
+      <form id="footer-email-signup" action="http://marmot.com/default.aspx" method="post" name="footer-email-signup">
+        <p>Get the latest news on products, technology, events &amp; promotions.</p>
+        <fieldset>
+          <div>
+            <input type="text" placeholder="Enter Email Address" class="email-subscribe" name="email" id="email" maxlength="100" autocomplete="off" />
+            <img src="/includes/img/interface/btn-submit.png" alt="Submit" class="arrow" id="subscribe_submit" />
+            <span class="email-bad-address">Email invalid. Please try again.</span>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
+  <div class="col connect">
+    <h2>Connect</h2>
+    <ul>
+      <li><a href="http://facebook.com/marmot"><img src="/includes/img/content/icon-facebook.jpg" alt="Facebook" /></a></li>
+      <li><a href="http://youtube.com/marmotpro"><img src="/includes/img/content/icon-youtube.jpg" alt="YouTube" /></a></li>
+      <li><a href="https://twitter.com/marmot"><img src="/includes/img/content/icon-twitter.jpg" alt="Twitter" /></a></li>
+      <li><a href="http://instagram.com/marmot"><img src="/includes/img/content/icon-instagram.jpg" alt="Instagram" /></a></li>
+      <li><a href="http://pinterest.com/marmotmountain"><img src="/includes/img/content/icon-pinterest.jpg" alt="Pinterest" /></a></li>
+    </ul>
+    <h2>Give us a call</h2>
+    <p class="phone">888.357.3262</p>
+  </div>
+
+  <div class="site-info">
+
+    <div class="copyright">
+      <p>All content &copy; Marmot Mountain LLC. All rights reserved.</p>
+    </div>
+
+    <ul>
+      <li><a href="/content/about-us/terms-of-use/">Terms</a></li>
+    </ul>
+    <ul>
+      <li><a href="/content/about-us/policies/">Privacy Policy</a></li>
+    </ul>
+  </div>
+</div>
+</footer>
+<!-- /footer-->
 </body>
 </html>

@@ -1,0 +1,1384 @@
+.modal-backdrop {
+  opacity: 0.9 !important;
+}
+
+
+/* CSS FROM SCRAPED MARMOT SITE */
+/* CSS for static Wordpress content. */
+
+/* Always precede style declarations with .static-content to avoid any conflicts with main ecommerce site styles
+
+Example:
+
+.static-content .my-style {
+	float: left;
+	}
+
+*/
+
+/** Technology Landing Pages - Table Layout **/
+
+.static-content .tech_container {
+    padding: 0 60px 0 60px;
+    margin-top: 40px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+    /* iPhone Portrait & Landscape */
+    .static-content .tech_container {
+        margin-top: 0px;
+        padding: 0 20px 0 20px;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+    /* iPhone Portrait & Landscape */
+    .static-content .tech_container {
+        margin-top: 0px;
+        padding: 0 20px 0 20px;
+    }
+}
+
+
+.static-content .tech_container p span.regmark,
+.static-content li span.regmark {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+    font-size: 10px;
+}
+
+.static-content .tech_container h2 span.regmark,
+.static-content .tech_container h3 span.regmark {
+    vertical-align: super;
+    font-size: 10px;
+}
+
+.static-content #tech_logo_table {
+    margin-top: 55px;
+}
+
+.static-content .tech_cell {
+    float: left;
+    width: 200px;
+    height: 230px;
+    background-color: #f4f4f4;
+    border-bottom: 6px solid #6d6d70;
+    margin-bottom: 50px;
+    background-repeat: no-repeat;
+}
+
+.static-content .tech_cell.pad {
+    margin-right: 14px;
+}
+
+.static-content .tech_cell.last {
+    clear: both;
+}
+
+.static-content .tech_cell:hover {
+    border-bottom: 6px solid #cc0000;
+    ;
+}
+
+.static-content .tech_cell span {
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 140px;
+    padding: 10px;
+    text-align: center;
+}
+
+.static-content .tech_cell a {
+    display: block;
+    width: 200px;
+    height: 230px;
+    color: #6d6d70;
+}
+
+.static-content .tech_cell.gore {
+    background-image: url(/includes/img/technology/tech_water_gore_sprite.png);
+}
+
+.static-content .tech_cell.downdefender {
+    background-image: url(/includes/img/technology/tech_water_downdef_sprite.png);
+}
+
+.static-content .tech_cell.mseries {
+    background-image: url(/includes/img/technology/tech_mseries_downdef_sprite.png);
+}
+
+.static-content .tech_cell.membrain {
+    background-image: url(/includes/img/technology/tech_water_membrain_sprite.png);
+}
+
+.static-content .tech_cell.precip {
+    background-image: url(/includes/img/technology/tech_water_precip_sprite.png);
+}
+
+.static-content .tech_cell.neoshell {
+    background-image: url(/includes/img/technology/tech_water_polartec_sprite.png);
+}
+
+.static-content .tech_cell.nanopro {
+    background-image: url(/includes/img/technology/tech_water_nanopro_sprite.png);
+}
+.static-content .tech_cell.guardian {
+    background-image: url(/includes/img/technology/tech_water_guardian_sprite.png);
+}
+
+.static-content .tech_cell.windstopper {
+    background-image: url(/includes/img/technology/tech_wind_windstopper_sprite.png);
+}
+
+.static-content .tech_cell.alpha {
+    background-image: url(/includes/img/technology/tech_cold_polartec_sprite.png);
+}
+
+.static-content .tech_cell.primaloft {
+    background-image: url(/includes/img/technology/tech_cold_primaloft_sprite.png);
+}
+
+.static-content .tech_cell.spirafil {
+    background-image: url(/includes/img/technology/tech_cold_spirafil_sprite.png);
+}
+
+.static-content .tech_cell.thermalr {
+    background-image: url(/includes/img/technology/tech_cold_thermalr_sprite.png);
+}
+
+.static-content .tech_cell.coolmax {
+    background-image: url(/includes/img/technology/tech_heat_coolmax_sprite.png);
+}
+
+.static-content .tech_cell.driclime {
+    background-image: url(/includes/img/technology/tech_heat_driclime_sprite.png);
+}
+
+.static-content .tech_cell.hollowcore {
+    background-image: url(/includes/img/technology/tech_heat_hollowcore_sprite.png);
+}
+
+.static-content .tech_cell.powerdry {
+    background-image: url(/includes/img/technology/tech_heat_polartec_sprite.png);
+}
+
+.static-content .tech_cell.thermalclime {
+    background-image: url(/includes/img/technology/tech_heat_thermalclime_sprite.png);
+}
+
+.static-content .tech_cell.upf {
+    background-image: url(/includes/img/technology/tech_heat_upf_sprite.png);
+}
+
+.static-content .tech_cell.drirelease {
+    background-image: url(/includes/img/technology/tech_heat_drirelease_sprite.png);
+}
+
+.static-content .tech_cell.techdenim {
+    background-image: url(/includes/img/technology/tech_heat_techdenim_sprite.png);
+}
+
+.static-content .tech_cell.nanowick {
+    background-image: url(/includes/img/technology/tech_heat_nanowick_sprite.png);
+}
+
+.static-content .tech_cell.airflow {
+    background-image: url(/includes/img/technology/tech_heat_airflow_sprite.png);
+}
+
+.static-content .tech_cell.supplex {
+    background-image: url(/includes/img/technology/tech_heat_supplex_sprite.png);
+}
+
+.static-content .tech_cell.solarshield {
+    background-image: url(/includes/img/technology/tech_heat_solarshield_sprite.png);
+}
+
+
+
+
+.static-content .tech_cell:hover {
+    background-position: -200px 0px
+}
+
+
+/** End of Technology Landing Pages - Table Layout **/
+
+/** Technology Detail Pages Styles **/
+.static-content #container {
+    float: left;
+    margin-bottom: 70px;
+    padding-bottom: 1px;
+}
+
+.static-content #inner {
+    float: left;
+    overflow: hidden;
+}
+
+.static-content #inner div.col1,
+.static-content #inner div.col2 {
+    float: left;
+    margin-bottom: -1000px;
+    padding-bottom: 1000px;
+}
+
+.static-content #inner .col1 {
+    width: 360px;
+    border-right: 1px solid #cccccc;
+    padding-right: 43px;
+}
+
+.static-content #inner .col2 {
+    width: 180px;
+    margin-right: 0;
+    padding-left: 43px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+    /* iPhone Portrait */
+    .static-content #inner .col1 {
+        width: 250px;
+        border-right: none;
+        padding-right: 10px;
+        padding-left: 15px;
+    }
+
+    .static-content #inner .col2 {
+        width: 180px;
+        margin-right: 0;
+        padding-left: 15px;
+        margin-top: 20px;
+    }
+
+    .static-content #inner .col1 h2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+    /* iPhone Landscape */
+    .static-content #inner .col1 h2 {
+        display:none;
+    }
+    .static-content #inner .col1 {
+        border-right: none;
+    }
+    .static-content #inner .col2 {
+        margin-right: 0;
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    /* IPAD PORTRAIT */
+    .static-content #inner .col1 {
+    }
+    .static-content .tech_container {
+        padding: 0 30px 0 30px;
+    }
+}
+
+.static-content .tech_container h3 {
+    font-family: "HelveticaNeueW02-ThinCn 674417",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 1.5em 0 0.5em;
+}
+
+.static-content .tech_container h3.tech-head-top {
+    margin-top: 0;
+}
+
+.static-content div.tech-image {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2em;
+    height: 100%;
+}
+
+.static-content div.tech-image a {
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.static-content div.tech-image a.btn.red {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.static-content div.tech-image {
+    display: block;
+}
+
+
+.static-content .clear {
+    clear: both;
+    padding-top: 10px;
+}
+
+.static-content .tech_detail_bar {
+    background-color:
+
+}
+
+.static-content #tech_prod_showcase {
+    overflow: hidden;
+}
+
+.static-content #tech_prod_showcase h3 {
+    margin: .5em 0 1.5em 0;
+    font-size: 18px;
+}
+
+.static-content .tech_prod_detail {
+    margin-right: 1.5em;
+    float: left;
+    text-align: center;
+}
+
+.static-content .tech_prod_detail.last {
+    margin-right: 0;
+}
+
+.static-content .tech_prod_detail_inner {
+}
+
+.static-content .tech_prod_detail .last {
+    padding-right: 0px;
+}
+
+.static-content .tech_prod_detail a {
+    color: #696969;
+}
+
+.static-content .tech_prod_detail a:hover {
+    text-decoration: none;
+}
+
+.static-content .tech_prod_detail p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.static-content .tech_prod_detail p span {
+    font-weight: bold;
+}
+
+.static-content div.tech-image.video-play-overlay a:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(204,0,0, 0.8);
+    background-image: url("/includes/img/technology/video-overlay-sprite.png");
+    background-position: -180px;
+    /*-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;*/
+    height: 96%;
+}
+
+.static-content div.tech-image.video-play-overlay a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: none;
+    background-image: url("/includes/img/technology/video-overlay-sprite.png");
+}
+
+.static-content div.tech-image.image-expand-overlay a:hover:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(204,0,0, 0.8);
+    background-image: url("/includes/img/technology/img_expand_hover.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*-moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;*/
+    height: 98%;
+}
+
+.static-content div.tech-image.image-expand-overlay a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 105px;
+    bottom: 0;
+    left: 145px;
+    right: 0;
+    background-color: none;
+    background-image: url("/includes/img/technology/img_expand_static.png");
+    background-repeat: no-repeat;
+}
+
+
+
+/** End of Technology Detail Pages Styles **/
+
+/** Store Locator Styles **/
+
+.static-content .locator-choice {
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+}
+
+.static-content #edit-city-wrapper #edit-city,
+.static-content #edit-postal-code-wrapper #edit-postal-code {
+    width: 150px;
+}
+
+.static-content #locator-search {
+    float: left;
+    width: 233px;
+}
+
+.static-content #google-map-search-form {
+}
+
+.static-content #locator-map {
+    padding-left: 250px;
+}
+
+.static-content #locator-brick {
+    margin-top: 35px;
+}
+.static-content #locator-brick ul {
+    clear: both;
+    padding: 0;
+}
+
+.static-content #locator-brick li {
+    float: left;
+    list-style-type: none;
+    width: 200px;
+    margin: 0px;
+}
+
+.static-content #locator-brick img {
+    float: left;
+}
+
+.static-content #gmap img {
+    max-width: inherit;
+}
+
+.static-content #locator-brick h3 {
+    clear: left;
+}
+
+.static-content .captchaSizeDivLarge img {
+    float: left;
+}
+
+.static-content input.form-text,
+.static-content input#captcha_code,
+.static-content textarea#contact-message {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F1F1F1;
+    border-color: #D7D7D7 -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-right: medium none;
+    border-style: solid none none;
+    border-width: 1px medium medium;
+    padding: 11px 14px;
+}
+
+.static-content #contact-email-wrapper,
+.static-content #contact-subject-wrapper,
+.static-content #contact-message-wrapper,
+.static-content #edit-city-wrapper,
+.static-content #edit-province-wrapper,
+.static-content #edit-country-wrapper {
+    margin-bottom: 5px;
+}
+
+.static-content #edit-distance-wrapper {
+    margin-bottom: 15px;
+}
+
+.static-content #edit-postal-code-wrapper {
+    margin-top: 5px;
+}
+
+
+.static-content #contact-form label {
+    width: 120px;
+}
+
+
+/* End of Store Locator Styles */
+
+/** Fit Guide Page Sytles **/
+
+.static-content #fit-guide ul.responsive-tabs__list {
+    margin-top: 0;
+}
+
+.static-content .fit-guide {
+    /*margin: 50px;*/
+}
+
+.static-content .fit-guide p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #666;
+    font-weight: normal;
+    line-height: 21px;
+}
+
+
+.static-content .fit-guide .fit_header {
+    color: #FFF;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+
+}
+
+.static-content .fit-guide .fit_col {
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: right;
+}
+
+.static-content .fit-guide table td {
+    border-bottom: 1px solid #cccccc;
+}
+
+.static-content .fit-guide .shading {
+    background-color: #EEEEEE;
+}
+
+.static-content .fit-guide p.fit-desc {
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 20px;
+}
+p.fit-desc span {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/** End of Fit Guide Page Sytles **/
+
+
+
+/** Typography Styles **/
+
+.static-content {
+    letter-spacing: normal;
+}
+
+.static-content h1 {
+    font-family: "HelveticaNeueW02-ThinCn 674417",Helvetica,Arial,sans-serif;
+    font-size: 50px;
+}
+
+.static-content h2 {
+    font-family: "HelveticaNeueW02-ThinCn 674417",Helvetica,Arial,sans-serif;
+    font-size: 36px;
+}
+
+.static-content h2.responsive-tabs__heading {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 20px;
+}
+
+.static-content h3 {
+    font-family: "HelveticaNeueW02-ThinCn 674417",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+}
+
+.static-content p {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+/** End of Typography Styles **/
+
+/** Customer Service Landing Pages **/
+.static-content .container-for-cs {
+    margin: 50px;
+}
+
+.static-content .container-for-cs h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.static-content .cs_cell {
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+.static-content .cs-highlighted {
+    background-color: #eeeeee;
+    padding: 20px 10px 10px 15px;
+    margin-bottom: 15px;
+}
+
+
+.static-content .cs-highlighted p {
+    margin: 0 0 10px 0;
+    padding: 0 25px 0px 35px;
+}
+
+.static-content .cs-highlighted p span {
+    font-weight: bold;
+}
+
+.static-content .cs-highlighted h4 {
+    margin-top: 0;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 15px;
+}
+
+.static-content .cs-highlight-image {
+    float: left;
+    margin-right: 10px;
+}
+
+.static-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    list-style: circle;
+}
+
+.static-content ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+
+/** End of Customer Service Pages **/
+
+/** Miscellaneous Styles **/
+
+.static-content .container-for-content {
+    margin: 50px 75px;
+}
+
+.static-content ul.responsive-tabs__list {
+    margin-left: 0;
+    padding-left: 60px;
+    margin-top: 30px;
+}
+
+.static-content .smallerh2 {
+    font-size: 35px;
+}
+
+.static-content hr.divider {
+    background-image: -moz-linear-gradient(left center, rgba(102, 102, 102, 0), rgba(102, 102, 102, 0.75), rgba(102, 102, 102, 0));
+    border: 0 none;
+    height: 1px;
+}
+
+/** End of Miscellaneous Styles **/
+
+/** Page Layouts **/
+
+.static-content .one-quarter:first-of-type {
+    margin-left: 0;
+}
+.static-content .one-quarter {
+    margin-left: 28px;
+    width: 150px;
+}
+.static-content .one-quarter {
+    float: left;
+    margin: 0 0 0 2%;
+    padding-bottom: 30px;
+    width: 23%;
+}
+
+
+/**End of Page Layouts **/
+
+/** Wash/Care & Technology Tabs PDP Pages **/
+
+div.wash-care-container p:first-of-type,
+div.wash-care-container p:nth-of-type(3) {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+div.technology-container div.technology-item ul, ul.wash-care-list {
+    list-style: disc inside none;
+}
+
+div.technology-container div.technology-item ol {
+    list-style: decimal inside none;
+}
+
+div.technology-container div.technology-item h4 {
+    text-transform: none;
+}
+
+div.technology-container div.technology-item span.regmark {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+    font-size: 10px;
+}
+
+div.technology-container hr {
+    border-top: 1px solid #666666;
+    width: 50%
+}
+/** End of Wash/Care & Technology Tabs PDP Pages **/
+
+/** Home Page Styles **/
+
+#hp-button {
+    margin: 10px 0 0;
+}
+
+.hp-feature-container {
+    overflow: auto;
+    font-size: 100%;
+    padding: 0 10px 10px;
+}
+
+.hp-feature-container > div {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+    width: 24.2%;
+}
+
+.hp-feature-container div.item:first-child {
+    margin-left: 0;
+}
+
+.hp-feature-container div.item {
+    text-align: center;
+}
+
+.hp-feature-container > div > img,
+.hp-feature-container .hp_overlay img {
+    width: 100%;
+    display: block;
+}
+
+.hp-feature-container .hp_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(102,102,102,0.9);
+    opacity: 0;
+    z-index: 1000;
+    transition: opacity 0.3s linear;
+    overflow: hidden;
+    padding: 1.6em;
+    color: white;
+}
+
+.hp-feature-container > div:hover .hp_overlay {
+    opacity: 1;
+}
+
+.hp-feature-container div.caption h3 {
+    font-family: "HelveticaNeueW02-ThinCn 674417",Helvetica,Arial,sans-serif;
+    font-size: 24px;
+    margin-bottom: .4em;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 1179px) {
+    .hp-feature-container > div {
+        width: 23.88%;
+    }
+    .hp-feature-container div.hp_overlay p {
+        visibility: hidden;
+    }
+    .hp-feature-container div.hp_overlay h3 {
+        font-size: 18px;
+    }
+    .hp-feature-container .hp_overlay {
+        padding: 1em;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .hp-feature-container > div {
+        width: 23.3%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .hp-feature-container {
+        padding: 0 4px 0 6px;
+    }
+    .hp-feature-container > div {
+        margin: 0 4px 4px 0;
+        width: 49.3%;
+    }
+    .hp-feature-container > div:nth-child(2n) {
+        margin-right: 0;
+    }
+    .hp-feature-container div.hp_overlay h3 {
+        font-size: 18px;
+    }
+    .hp-feature-container div.hp_overlay p {
+        visibility: visible;
+    }
+}
+
+div.hp-slider-text {
+    background-image: url(http://cdnmedia.marmot.com/images/homepage_heroes/marmot_holiday_gift_guide.jpg);
+    background-repeat: no-repeat;
+    max-height: 400px;
+    padding: 17% 0 10% 23.5%;
+    font-size: 14px;
+    line-height: 26px;
+    width: 100%;
+}
+
+div.hp-slider-text ul li:nth-child(2) {
+    padding-top: 10px;
+}
+
+div.hp-slider-text a {
+    color: #FFFFFF;
+}
+
+div.hp-slider-text ul.first, div.hp-slider-text ul.second {
+    float: left;
+}
+
+div.hp-slider-text ul.fourth {
+    padding-top: 10px;
+}
+
+div.hp-slider-text ul {
+    margin-right: 10%;
+}
+div.hp-slider-text ul span {
+    font-weight: bold;
+    font-size: 24px;
+}
+div.hp-slider-text br.hp-slider-text-hide {
+    display: none;
+}
+
+@media only screen and (min-width: 767px) {
+    div.hp-slider-text h2 {
+        display:none;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For portrait layouts only */
+    div.hp-slider-text ul {
+        margin-right: 5%;
+    }
+    div.hp-slider-text {
+        padding: 21% 0 10% 25%;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait) {
+    /* iPhone Portrait & Landscape */
+    div.hp-slider-text ul {
+        margin-right: 15%;
+    }
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape) {
+    /* iPhone Landscape */
+    div.hp-slider-text {
+        background-image: none;
+        background-color: #CC0000;
+        padding: 4% 3% 10% 3%;
+    }
+    div.hp-slider-text h2 {
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+    div.hp-slider-text ul {
+        margin-right: 3%;
+    }
+    div.hp-slider-text ul.fourth {
+        margin-right: 0;
+        float: left;
+    }
+    div.hp-slider-text ul.third {
+        float: left;
+    }
+    div.hp-slider-text ul.fourth {
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    div.hp-slider-text {
+        height: 100%;
+        width: 100%;
+        font-size: 11px;
+        line-height: 14px;
+        padding: 5%;
+        background-image: none;
+        background-color: #CC0000;
+    }
+    div.hp-slider-text ul span {
+        font-weight: bold;
+        font-size: 12px;
+    }
+    div.hp-slider-text ul li:nth-child(2) {
+        padding-top: 5px;
+    }
+    div.hp-slider-text ul.fourth {
+        padding-top: 5px;
+    }
+    div.hp-slider-text h2 {
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+}
+
+
+/** End of Home Page Styles **/
+
+/** Additional Homepage Styles for Text Change Rollovers **/
+.feature-container a div {
+    position: relative;
+    height: 100%;
+}
+
+.feature-container a div h2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.feature-container a div h2 span {
+    background: none repeat scroll 0 0 rgba(147, 147, 147, 0.7);
+    color: #FFFFFF;
+    margin: 0;
+    padding: 5px 0;
+    width: 100%;
+    display: block;
+    height: 10%;
+    position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-family: "HelveticaNeueW02-ThinCn 674417";
+    line-height: none;
+}
+
+.feature-container a div h2.hoverable span.hover {
+    display: none;
+}
+
+.feature-container a div h2 span:before {
+    content: url(http://cdnmedia.marmot.com/images/homepage_merch/arrow_dot_blk.png);
+    padding: 10px 10px 5px 10px;
+}
+
+/* IE RULES */
+.feature-container a div img:hover ~ h2.hoverable span.hover {
+    display: block;
+}
+.feature-container a div img:hover ~ h2 span:before {
+    content: url(http://cdnmedia.marmot.com/images/homepage_merch/arrow_dot_red.png);
+}
+.feature-container a div img:hover ~ h2.hoverable span.normal {
+    display: none;
+}
+/* //END IE RULES */
+
+@media only screen
+and (min-width : 1224px) {
+    .feature-container a div h2.hoverable:hover span.normal {
+        display:none;
+    }
+
+    .feature-container a div h2.hoverable:hover span.hover {
+        display: block;
+    }
+
+    .feature-container a div h2:hover span:before {
+        content: url(http://cdnmedia.marmot.com/images/homepage_merch/arrow_dot_red.png);
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    .feature-container a div h2.hoverable span.normal {
+        display:none;
+    }
+    .feature-container a div h2.hoverable span.hover {
+        display: inline;
+    }
+    .feature-container a div h2 span:before {
+        content: url(http://cdnmedia.marmot.com/images/homepage_merch/arrow_dot_blk_responsive.png);
+        padding: 5%;
+    }
+    .feature-container a div h2 span {
+        font-size: 30%;
+        height: 8%;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .feature-container a div h2.hoverable span.normal {
+        display:none;
+    }
+    .feature-container a div h2.hoverable span.hover {
+        display: inline;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+    .feature-container a div h2 span {
+        font-size:14px;
+    }
+}
+/** //End of Additional Homepage Styles for Text Change Rollovers **/
+
+/** // HOMEPAGE STYLES FOR TEXT ROLLOVERS **/
+.hp-hero-button-outer-wrapper {
+    position: relative;
+    width: 100%;
+}
+.hp-hero-button-wrapper {
+    position: absolute;
+    left: 10%;
+    bottom: 9%;
+    width: 24%;
+    text-align: center;
+    font-size: 16px;
+}
+.hp-hero-button-wrapper p {
+    margin-bottom: .5em;
+}
+
+@media only screen and (max-width: 479px) {
+    .hp-hero-button-wrapper {
+        position:absolute;
+        left: 7%;
+        bottom: 6%;
+        width: 28%;
+    }
+    .hp-hero-button-wrapper p {
+        font-size: 8px;
+        margin-bottom: .2em;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+    .hp-hero-button-wrapper {
+        bottom: 5%;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+    .hp-hero-button-wrapper {
+        bottom:4%;
+    }
+    .hp-hero-button-wrapper p {
+        font-size: 10px;
+    }
+}
+
+/** // END OF HOMEPAGE STYLES FOR TEXT ROLLOVERS **/
+
+
+/** //ATHLETE PAGE STYLING **/
+ul.imagegrid {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 30px;
+}
+ul.imagegrid li {
+    display: inline-block;
+    *display: inline;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+
+.imagegrid li a {
+    position: relative;
+}
+
+.imagegrid li a:hover:before {
+    background-image: url(http://cdnmedia.marmot.com/images/theme/expand_icon_athletes2.png);
+    top: -88px;
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 150px;
+    overflow: visible;
+}
+
+.imagegrid li a.no-overlay:hover:before {
+    background-image: none;
+}
+
+.imagegrid li a:hover {
+}
+
+.imagegrid.video-play-overlay li a:before {
+    background-image: url(http://cdnmedia.marmot.com/images/theme/video-overlay-sprite.png);
+    top: -88px;
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 150px;
+    overflow: visible;
+}
+
+.imagegrid.video-play-overlay li a {
+}
+
+.imagegrid.video-play-overlay li a:hover:before {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.static-content .header_link a {
+    color: #666666;
+}
+.static-content .header_link a:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+ul.imagegrid li div {
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 10px;
+    text-align: center;
+    margin-bottom: 4%;
+    color: #666666;
+}
+
+ul.imagegrid li a:hover div {
+    text-decoration: underline;
+}
+
+li.imagegrid_button {
+    vertical-align: bottom;
+    padding-bottom: 6%;
+}
+ul.imagegrid li div.imagegrid_desc {
+    width: 150px;
+    line-height: 15px;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    li.imagegrid_button {
+        background-color: #CC0000;
+        padding: 10px;
+        width: 130px;
+        text-align: center;
+    }
+
+    li.imagegrid_button a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+}
+
+ul.imagegrid li.imagegrid_button_shadow {
+    box-shadow: 0 1px 2px #CCCCCC;
+    margin-bottom: 15px;
+}
+
+ul.imagegrid li.imagegrid_button_shadow:hover {
+    box-shadow: 0 1px 2px #999999;
+}
+
+ul.imagegrid li.imagegrid_button_shadow a:hover div {
+    color: #CC0000;
+    text-decoration: none;
+}
+
+img.tab-banner {
+    display: none;
+}
+
+img.tab-banner-active {
+    margin-bottom: -5px;
+}
+
+ul.linkContainer {
+    font-size: 13px;
+    margin: 0 0 0 4px;
+    list-style: none;
+    width: 100%;
+}
+ul.linkContainer li {
+    display: inline;
+}
+ul.linkContainer li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+ul.linkContainer li a.women {
+    background-color: #797979;
+    margin-right: -4px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+ul.linkContainer li a.men {
+    background-color: #666666;
+    border-left: 1px solid white;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+ul.linkContainer li a:hover {
+    background-color: #555555;
+}
+div.barLinks {
+    font-size: 15px;
+    margin-top: -5px;
+    max-width: 210px;
+}
+div.barLinks:hover {
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+div.barLinks div {
+    padding-top: 5px;
+
+}
+div.barLinks a {
+    color: #FFFFFF;
+    display: block;
+    background-color: #797979;
+    text-decoration: none;
+    text-align: center;
+    padding-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+div.barLinks a:hover {
+    background-color: #555555;
+}
+ul.imagegrid2 {
+    list-style: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+ul.imagegrid2 li {
+    display: inline-block;
+    *display: inline;
+    margin-right: 5px;
+    margin-bottom: 4px;
+}
+ul.imagegrid2 li:last-of-type {
+    margin-right: 0px;
+}
+.imagegrid2 li a {
+    display: block;
+}
+.imagegrid2 li {
+    position: relative;
+}
+.imagegrid2 li a {
+    margin: 0;
+    padding: 0;
+}
+.imagegrid2 li a:hover .dim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.55);
+    margin: 0;
+    background-image: url(http://cdnmedia.marmot.com/images/theme/expand_image_icon.png);
+    background-repeat: no-repeat;
+    background-position: 95% 90%;
+}
+.imagegrid2 li a:hover .dim.videoexpand {
+    background-image: url(http://cdnmedia.marmot.com/images/theme/expand_video_hover_icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.imagegrid2 li a .dim.videoexpand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background-image: url(http://cdnmedia.marmot.com/images/theme/expand_video_icon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.imagegrid2 li a.video-overlay {
+    overflow: hidden;
+}
