@@ -22,10 +22,10 @@ function getItemImages(){
 }
 
 function triggerOverlay(numItems, cartTotal, itemImages){
-  var lastScroll = 0 // compare current scroll vs. last scroll so modal isn't re-triggered if user scrolls up
+  var lastScroll = 0
   $(window).scroll(function () {
     var currentScroll = $(window).scrollTop();
-      if (bottom10prcntOfPage(currentScroll) && scrollDown(currentScroll, lastScroll)) {
+      if (bottom10prcntOfPage(currentScroll) && isScrollDown(currentScroll, lastScroll)) {
         // remove old cart data if modal previously generated
         if ($(".cart-content").children().length > 0) {
           removeOldCartData();
@@ -42,10 +42,10 @@ function triggerOverlay(numItems, cartTotal, itemImages){
 }
 
 /* NOTE: The local version has a document body height greater than the viewport height (possibly b/c of
-the weird scraped marmot.com HTML) so the hardcoded line in the bottomOfPage function works locally
-but the commented out lines below that are the proper version (that works on marmot.com). */
+the weird scraped marmot.com HTML) so the hardcoded 'if statement' below works locally but the
+commented-out 'if statement' below that is the proper version (that works on marmot.com). */
 function bottom10prcntOfPage(currentScroll){
-  if (currentScroll > 678.6) {
+  if (currentScroll > 650) {
     return true;
   }
   // if (currentScroll + $(window).height() > $(document).height() * 0.9) {
@@ -53,7 +53,7 @@ function bottom10prcntOfPage(currentScroll){
   // }
 }
 
-function scrollDown(currentScroll, lastScroll){
+function isScrollDown(currentScroll, lastScroll){
   if (currentScroll > lastScroll || lastScroll == $(document).height) {
     return true;
   }
@@ -72,10 +72,10 @@ function appendImages(images){
 
 function appendNumItems(num){
   $(".cart-content").append("<div id='item-num'></div>");
-  $("#item-num").append("<p>Current Items in Cart:" + num + "</p>");
+  $("#item-num").append("<p>Items: " + num + "</p>");
 }
 
 function appendTotal(total){
   $(".cart-content").append("<div id='item-total'></div>");
-  $("#item-total").append("<p>Cart Total:" + total + "</p>");
+  $("#item-total").append("<p>Subtotal: " + total + "</p>");
 }
