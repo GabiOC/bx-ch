@@ -3,48 +3,42 @@
 
   <meta charset="utf-8">
   <title>Marmot</title>
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/script.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 
-<!-- The trigger should show a centered overlay on top of the site that displays the information gathered
-above and two buttons. One button closes the overlay and the other takes the user to the cart page. -->
-
-<!-- Overlay -->
-
+<!-- Modal -->
 <div id="cart-modal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog">
 
-    <!-- Overlay content-->
+    <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Want to Stay Warm This Winter?</h4>
-      </div>
+      <h4 class="modal-title">Do You Want to Keep These Items?</h4>
       <div class="modal-body">
         <div class="cart-content"></div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Hell no I don't</button>
+        <button type="button" class="btn" id="dismiss" data-dismiss="modal">Hell no I don't</button>
         <a href="https://marmot.com/checkout/cart">
-          <button class="btn btn-primary" type="submit">Hellz yeah I do!</button>
+          <button class="btn" id="success" type="submit">Hellz yeah I do!</button>
         </a>
       </div>
     </div>
-
+    <!-- End modal content -->
   </div>
 </div>
+<!-- End modal -->
 
 <!-- Scraped Marmot homepage with dummy cart data added -->
-
 <header id="wrapperHeader">
   <div class="content-inner clear">
       <h1 id="logo">
-          <a href="/"><img src="/includes/img/interface/logo.gif" alt="Marmot" title="Marmot" /></a>
+          <a href="/"><img src="http://marmot.com/includes/img/interface/logo.gif" alt="Marmot" title="Marmot" /></a>
       </h1>
 
       <ul class="device-only menu-icons">
@@ -56,26 +50,23 @@ above and two buttons. One button closes the overlay and the other takes the use
               <li><a class="mobile-profile-link" href="/account/login"><img src="/includes/img/content/icon-myaccount@2x.jpg" alt="" /></a></li>
 
       </ul>
+  <div id="hdrPromo" class="large-screen-only">Free ground shipping on orders over $75</div>
 
+  <div class="user-panel">
+    <ul id="navUser">
+        <li id="navRetailers"><a href="/content/find-a-retailer">Find a Store</a></li>
 
-          <div id="hdrPromo" class="large-screen-only">Free ground shipping on orders over $75</div>
+            <li id="navMyAct"><a href="/account/login">My Account</a></li>
+            <li></li>
+            <!-- <li></li> -->
 
-      <div class="user-panel">
-          <ul id="navUser">
-              <li id="navRetailers"><a href="/content/find-a-retailer">Find a Store</a></li>
+    </ul>
 
-                  <li id="navMyAct"><a href="/account/login">My Account</a></li>
-                  <li></li>
-                  <!-- <li></li> -->
-
-          </ul>
-
-              <ul id="navCart">
-                  <li id="navShoppingCart"><a href="/checkout/cart">Shopping Cart (2)</a></li>
-                  <!-- <li id="navCheckout"><a href="/checkout/cart">Checkout</a></li>-->
-              </ul>
-
-      </div>
+    <ul id="navCart">
+        <li id="navShoppingCart"><a href="/checkout/cart">Shopping Cart (2)</a></li>
+        <!-- <li id="navCheckout"><a href="/checkout/cart">Checkout</a></li>-->
+    </ul>
+  </div>
 
 
 <div id="hdrShoppingCart">
@@ -107,7 +98,7 @@ above and two buttons. One button closes the overlay and the other takes the use
 <!-- /div#hdrShoppingCart -->
 
 
-      <div class="nav-search-container">
+<div class="nav-search-container">
 
 
 <div class="navMain">
@@ -943,71 +934,69 @@ above and two buttons. One button closes the overlay and the other takes the use
 </ul>
 </div>
 </div>
-
-          <form action="/search/products" id="searchForm">
-              <fieldset id="search" role="search">
-        <input id="searchText" name="searchText" type="text" value="" placeholder="Search"><a id="searchBtn" href="#" title="Search"><div id="searchBtnImg"></div></a></input>
-              </fieldset>
-          </form>
-      </div>
+  <form action="/search/products" id="searchForm">
+    <fieldset id="search" role="search">
+      <input id="searchText" name="searchText" type="text" value="" placeholder="Search"><a id="searchBtn" href="#" title="Search"><div id="searchBtnImg"></div></a></input>
+    </fieldset>
+  </form>
+  </div>
   </div>
 </header>
 
 <div class="wrapper">
   <div id="content" class="content-inner clear" role="main">
 
-<div id="slider-wrapper">
+  <div id="slider-wrapper">
 
-<!-- images are 980x400 -->
-<div class="cycle-slideshow" style="max-height:550px;" data-cycle-slides="a" data-cycle-speed="800" data-cycle-timeout="6000" data-cycle-carousel-fluid=true data-cycle-swipe=true>
-  <a href="/search/insulation" title="Insulation"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_insulation.jpg" alt="Insulation" /></a>
-  <a href="/products/activity/urban-exploration/women" title="Urban Exploration Women"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_w.jpg" alt="Urban Exploration Women" /></a>
-        <a href="/products/activity/urban-exploration/men" title="Urban Exploration Men"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_m.jpg" alt="Urban Exploration Men" /></a>
-     </div>
-</div>
+  <!-- images are 980x400 -->
+  <div class="cycle-slideshow" style="max-height:550px;" data-cycle-slides="a" data-cycle-speed="800" data-cycle-timeout="6000" data-cycle-carousel-fluid=true data-cycle-swipe=true>
+    <a href="/search/insulation" title="Insulation"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_insulation.jpg" alt="Insulation" /></a>
+    <a href="/products/activity/urban-exploration/women" title="Urban Exploration Women"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_w.jpg" alt="Urban Exploration Women" /></a>
+          <a href="/products/activity/urban-exploration/men" title="Urban Exploration Men"><img src="http://cdnmedia.marmot.com/images/homepage_heroes/f15_marmot_citytech_m.jpg" alt="Urban Exploration Men" /></a>
+       </div>
+  </div>
 
-<div class="feature-container" id="hp-merch-spot-tracking">
-  <a href="/search/waterproof-extreme" title="Marmot Waterproof Extreme">
-      <!-- image is 238x198 -->
-      <div>
-          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-shells.jpg" alt="Marmot Waterproof Extreme" />
-          <h2 class="hoverable">
-              <span class="normal">Protection Everywhere</span><span class="hover">Shop Shells</span>
-          </h2>
-      </div>
-  </a>
+  <div class="feature-container" id="hp-merch-spot-tracking">
+    <a href="/search/waterproof-extreme" title="Marmot Waterproof Extreme">
+        <!-- image is 238x198 -->
+        <div>
+            <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-shells.jpg" alt="Marmot Waterproof Extreme" />
+            <h2 class="hoverable">
+                <span class="normal">Protection Everywhere</span><span class="hover">Shop Shells</span>
+            </h2>
+        </div>
+    </a>
 
-  <a href="/products/activity/snowsports" title="Snowsports">
-      <!-- image is 237x198 -->
-      <div>
-          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-snowsports.jpg" alt="Snowsports" />
-          <h2 class="hoverable">
-              <span class="normal">Living the Adventure</span><span class="hover">Shop Snowsports</span>
-          </h2>
-      </div>
-  </a>
+    <a href="/products/activity/snowsports" title="Snowsports">
+        <!-- image is 237x198 -->
+        <div>
+            <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-snowsports.jpg" alt="Snowsports" />
+            <h2 class="hoverable">
+                <span class="normal">Living the Adventure</span><span class="hover">Shop Snowsports</span>
+            </h2>
+        </div>
+    </a>
 
-  <a href="/products/jackets--vests/softshells" title="Marmot Softshells">
-      <!-- image is 238x198 -->
-      <div>
-          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-softshells.jpg" alt="Marmot Softshells" />
-          <h2 class="hoverable">
-              <span class="normal">Versatility &amp; Comfort</span><span class="hover">Shop Softshells</span>
-          </h2>
-      </div>
-  </a>
+    <a href="/products/jackets--vests/softshells" title="Marmot Softshells">
+        <!-- image is 238x198 -->
+        <div>
+            <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-marmot-softshells.jpg" alt="Marmot Softshells" />
+            <h2 class="hoverable">
+                <span class="normal">Versatility &amp; Comfort</span><span class="hover">Shop Softshells</span>
+            </h2>
+        </div>
+    </a>
 
-  <a href="/content/find-a-store/marmot-stores/denver" title="Explore the Store">
-      <!-- image is 237x198 -->
-      <div>
-          <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-denver.jpg" alt="Explore the Store" />
-          <h2 class="hoverable">
-              <span class="normal">New Store &mdash; Denver</span><span class="hover">Explore the Store</span>
-          </h2>
-      </div>
-  </a>
-</div>
-
+    <a href="/content/find-a-store/marmot-stores/denver" title="Explore the Store">
+        <!-- image is 237x198 -->
+        <div>
+            <img src="http://cdnmedia.marmot.com/images/homepage_merch/mml-f15-new-merch-denver.jpg" alt="Explore the Store" />
+            <h2 class="hoverable">
+                <span class="normal">New Store &mdash; Denver</span><span class="hover">Explore the Store</span>
+            </h2>
+        </div>
+    </a>
+    </div>
   </div>
 </div>
 
@@ -1088,8 +1077,8 @@ above and two buttons. One button closes the overlay and the other takes the use
       <li><a href="/content/about-us/policies/">Privacy Policy</a></li>
     </ul>
   </div>
-</div>
-</footer>
+  </div>
+  </footer>
 <!-- /footer-->
 </body>
 </html>
