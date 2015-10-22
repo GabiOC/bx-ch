@@ -25,13 +25,10 @@ function triggerOverlay(numItems, cartTotal, itemImages){
   var lastScroll = 0 // compare current scroll vs. last scroll so modal isn't re-triggered if user scrolls up
   $(window).scroll(function () {
     var currentScroll = $(window).scrollTop();
-      /* NOTE: The local version has a document body height greater than the viewport height (possibly b/c of
-      the weird scraped marmot.com HTML) so the hardcoded line below works locally but the commented out line
-      below that is the correct version (which works on marmot.com). */
-      if ((currentScroll > 678.6) && (currentScroll > lastScroll)) {
-      // if (currentScroll + $(window).height() > $(document).height() * 0.9 && (currentScroll > lastScroll)) {
-        if ($(".cart-content").children().length > 0){ // remove previous cart data if modal previously generated
-          removeOldData();
+      if (bottom10prcntOfPage(currentScroll) && scrollDown(currentScroll, lastScroll)) {
+        // remove old cart data if modal previously generated
+        if ($(".cart-content").children().length > 0) {
+          removeOldCartData();
         }
         // append cart data to modal
         appendImages(itemImages);
@@ -44,7 +41,25 @@ function triggerOverlay(numItems, cartTotal, itemImages){
   });
 }
 
-function removeOldData(){
+/* NOTE: The local version has a document body height greater than the viewport height (possibly b/c of
+the weird scraped marmot.com HTML) so the hardcoded line in the bottomOfPage function works locally
+but the commented out lines below that are the proper version (that works on marmot.com). */
+function bottom10prcntOfPage(currentScroll){
+  if (currentScroll > 678.6) {
+    return true;
+  }
+  // if (currentScroll + $(window).height() > $(document).height() * 0.9) {
+  //   return true;
+  // }
+}
+
+function scrollDown(currentScroll, lastScroll){
+  if (currentScroll > lastScroll || lastScroll == $(document).height) {
+    return true;
+  }
+}
+
+function removeOldCartData(){
   $(".cart-content").empty();
 }
 
