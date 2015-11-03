@@ -22,9 +22,9 @@ function getItemImages(){
 }
 
 function triggerOverlay(numItems, cartTotal, itemImages){
-  var lastScroll = 0
+  var lastScroll = 0;
+  var currentScroll = $(window).scrollTop();
   $(window).scroll(function () {
-    var currentScroll = $(window).scrollTop();
       if (bottom10prcntOfPage(currentScroll) && isScrollDown(currentScroll, lastScroll)) {
         // remove old cart data if modal previously generated
         if ($(".cart-content").children().length > 0) {
@@ -41,9 +41,9 @@ function triggerOverlay(numItems, cartTotal, itemImages){
   });
 }
 
-/* NOTE: The local version has a document body height greater than the viewport height (possibly b/c of
-the weird scraped marmot.com HTML) so the hardcoded 'if statement' below works locally but the
-commented-out 'if statement' below that is the proper version (that works on marmot.com). */
+/* NOTE: The local version has a document body height greater than the viewport and scroll height
+(possibly b/c of the weird scraped marmot.com HTML) so the hardcoded if statement below works
+locally but the commented-out if statement below that is the proper version (that works on marmot.com). */
 function bottom10prcntOfPage(currentScroll){
   if (currentScroll > 650) {
     return true;
@@ -54,7 +54,7 @@ function bottom10prcntOfPage(currentScroll){
 }
 
 function isScrollDown(currentScroll, lastScroll){
-  if (currentScroll > lastScroll || lastScroll == $(document).height) {
+  if (currentScroll > lastScroll || lastScroll + $(window).height() == $(document).height) {
     return true;
   }
 }
